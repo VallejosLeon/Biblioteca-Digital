@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.libraryBody{
+    background-color: #282829;
+}
+
+.index-background{
+    background-image: url('background.jpg');
+    height: auto;
+    width: auto;
+}
+
+.btn-violet{
+    background-color: rgb(143, 100, 237);
+    color: white;
+}
+
+h2{
+    text-align: center;
+    font-size: larger;
+}
+
+
+.inicio{
+    display: block;
+}
+
+.conteiner{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 2%;
+    padding: 10px;
+    padding-left: 2px;
+    border: 4px solid #2f83ff; /* Color y grosor de los bordes */
+    border-radius: 8px; /* Bordes redondeados, opcional */
+    width: 300px; /* Ancho del contenedor */
+}
+
+.library {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se distribuyan en varias líneas */
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; /* Establece un ancho máximo para la sección de los libros */
+    margin: 0 auto; /* Centra la sección en la página */
+}
+
+.book, .video {
+    flex: 0 0 25%; /* Establece que cada libro ocupe el 25% del ancho en una fila de 4 */
+    max-width: 200px; /* Limita el ancho máximo de cada libro */
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 13px 14px 13px -8px rgba(22, 22, 22, 0.75);
+    -webkit-box-shadow: -13px 14px 13px -8px rgba(22, 22, 22, 0.75);
+    -moz-box-shadow: -13px 14px 13px -8px rgba(22, 22, 22, 0.75);
+}
+
+.book img, .video img {
+
+    border: 2px solid #212852;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.book:hover, .video:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px 5px rgba(0, 191, 255, 0.7); /* Cambia el color del brillo al pasar el mouse */
+    transition: box-shadow 0.3s;
+}
+
+.book:hover img, .video:hover {
+    cursor: pointer;
+}
+
+
+/* Para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+    .library {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .book, .video {
+        flex: 0 0 50%; /* Cda portada usará el 50% del espacio */
+        max-width: 130px;
+        margin: 10px;
+        box-shadow: 13px 14px 13px -8px rgba(22, 22, 22, 0.75);
+    -webkit-box-shadow: -13px 14px 13px -8px rgba(22, 22, 22, 0.75);
+    -moz-box-shadow: -13px 14px 13px -8px rgba(22, 22, 22, 0.75);
+    }
+
+    .book img, .video img {
+        width: 130px;
+        height: 230px;
+        border-radius: 10px;
+    }
+}
